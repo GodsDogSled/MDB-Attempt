@@ -9,9 +9,14 @@
   border-left: black;
   border-right: black;
   padding-top: 1rem;
+  position: sticky;
+  margin: 0 15px;
+  margin-bottom: 15px;
+  top: 70px;
 }
 
 h2.more-info-title {
+
   font-family: shapiro-45-welter-text;
   font-size: 22px;
   color: white;
@@ -35,6 +40,7 @@ h2.more-info-title {
 
 .single-card {
   max-width: 200px;
+
   background-color: #1D1D1D;
   width: 310px;
   height: 94%;
@@ -149,7 +155,7 @@ h2.more-info-title {
   border-radius: $rounded-border;
   padding: 25px;
   max-width: 500px;
-  height: 900px;
+
 }
 
 @media (min-width:$tabletPortrait) {
