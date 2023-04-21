@@ -10,8 +10,8 @@ function PageFavourites() {
 
   return (
     <main>
-      <section>
-      
+      <section className="favourites">
+      <span className = "blue-box"></span>
         <h2>Favourites</h2>
         {favourites.length < 1 ? (
           <p>No favourites in your collection. Return to the <Link to="/">home</Link> page

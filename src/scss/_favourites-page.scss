@@ -1,0 +1,20 @@
+.favourites {
+  margin: 0 15px;
+  position: relative;
+
+  h2 {
+    font-size: 25px;
+  }
+
+
+}
+
+.blue-box {
+  position: absolute;
+  top: 1px;
+  left: -39px;
+  z-index: -19;
+  background-color: blue;
+  width: 35px;
+  height: 35px;
+}
