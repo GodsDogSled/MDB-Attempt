@@ -31,6 +31,7 @@ function Search(){
     return(
         <>
         <div className="search">
+        <span className = "blue-box"></span> 
             <h2>Search</h2>
            
             <div className="searchInput">

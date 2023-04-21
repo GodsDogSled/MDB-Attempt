@@ -2,4 +2,29 @@
   width: 100%;
   box-sizing: border-box;
   border-radius: 10px;
+
+
+}
+
+input[type=text]:focus {
+  border: 3px solid blue;
+}
+
+.search {
+  position: sticky;
+  top: 70px;
+  z-index: 500;
+  background-color: black;
+  padding-bottom: 20px;
+  margin: 0 15px;
+
+  .blue-box {
+    position: absolute;
+    left: -38px;
+    display: block;
+    z-index: -19;
+    background-color: blue;
+    width: 35px;
+    height: 35px;
+  }
 }
