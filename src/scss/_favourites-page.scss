@@ -1,11 +1,12 @@
 .favourites {
   margin: 0 15px;
   position: relative;
+  min-height: 90vh;
 
   .title {
     position: fixed;
     z-index: 500;
-    width: 80%;
+    width: 100%;
     background-color: black;
   }
 
