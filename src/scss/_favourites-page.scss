@@ -2,19 +2,33 @@
   margin: 0 15px;
   position: relative;
 
-  h2 {
-    font-size: 25px;
+  .title {
+    position: fixed;
+    z-index: 500;
+    width: 80%;
+    background-color: black;
   }
 
+  h2 {
+    font-size: 25px;
+    z-index: 999;
+    background-color: black;
+    margin: 0;
 
-}
+  }
 
-.blue-box {
-  position: absolute;
-  top: 1px;
-  left: -39px;
-  z-index: -19;
-  background-color: blue;
-  width: 35px;
-  height: 35px;
+  .blue-box {
+    position: absolute;
+    top: 1px;
+    left: -39px;
+    z-index: -19;
+    background-color: blue;
+    width: 35px;
+    height: 35px;
+  }
+
+  .movie-grid-container {
+    padding-top: 50px;
+  }
+
 }

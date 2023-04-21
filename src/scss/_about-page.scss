@@ -1,5 +1,31 @@
 .credits-icon {
-
   margin-top: 2rem;
   margin-bottom: 8rem;
+}
+
+.about-page {
+  padding: 0 15px;
+
+  .title-container {
+    position: fixed;
+  }
+
+  .title {
+    h2 {
+      margin-top: 0 !important;
+    }
+
+    .blue-box {
+      position: absolute;
+      left: -38px;
+      display: block;
+      z-index: -19;
+      background-color: blue;
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+
+  .content {}
 }
