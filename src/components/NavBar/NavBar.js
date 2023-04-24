@@ -22,22 +22,25 @@ const NavBarContainer = styled.div`
     justify-content:space-between;
     margin-bottom:0;
     margin-top:0;
+    padding-top:20px;
 `;
 
 const LeftSection = styled.div`
   display: flex;
   height:100%;
-  justify-content:center;
-  align-items:center;
-  
+  position:relative;
+  width:100px;
+  top:12px;
 `;
 const MiddleSection = styled.div`
   display: flex;
   height:100%;
+  align-items:center;
 `;
 const RightSection = styled.div`
   display:flex;
   height:100%;
+  justify-content:center;
 `;
 
 const DesktopSearchContainer =  styled.div`
@@ -47,7 +50,6 @@ const DesktopSearchContainer =  styled.div`
   height:25px;
   width:25px;
   align-self:center;
-
 
   svg{
     fill:white;
@@ -64,8 +66,8 @@ const DesktopSearchContainer =  styled.div`
     height:16px;
     background-color:blue;
     position:absolute;
-    top:20px;
-    right:8px;
+    top:37px;
+    right:7px;
     z-index:-10;
   }
 
@@ -73,7 +75,6 @@ const DesktopSearchContainer =  styled.div`
     svg{
       transform: scale(1.1);
       fill:white;
-    
       scale:2:
     }
 
@@ -95,7 +96,7 @@ export default function NavBar(props) {
       <Link to= "/" ><Logo /></Link>
     </LeftSection>
     <MiddleSection>
-     {!isMobile &&  <NavLinks />}
+      {!isMobile &&  <NavLinks />}
     </MiddleSection>
     <RightSection>
       {isMobile && <MobileNav />}
