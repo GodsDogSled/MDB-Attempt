@@ -72,17 +72,41 @@ select {
 
 
 
-@media screen and (min-width:1024px) {
+@media screen and (min-width:878px) {
   .movie-grid-container {
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 252px);
     gap: 2rem;
     padding: 2rem;
     background-color: black;
     justify-items: center;
+    justify-content: center;
     max-width: 1920px;
 
+  }
+}
+
+@media screen and (min-width:1200px) {
+  .movie-grid-container {
+    grid-template-columns: repeat(4, 252px);
+
+  }
+}
+
+
+@media screen and (min-width:1400px) {
+  .movie-grid-container {
+    grid-template-columns: repeat(5, 252px);
+
+  }
+}
+
+@media screen and (min-width:1700px) {
+  .movie-grid-container {
+    grid-template-columns: repeat(6, 252px);
+    justify-items: center;
+    justify-content: center;
   }
 }
 

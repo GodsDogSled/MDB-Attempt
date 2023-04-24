@@ -30,6 +30,7 @@ const LinkItem = styled.li`
     color:white;
     display:inline-block;
     position:relative;
+    transition: 0.5s ease-out;
     
     &::after{
       position:absolute;
@@ -41,7 +42,7 @@ const LinkItem = styled.li`
       background-color:blue;
       visibility: hidden;
       opacity: 0;
-      transition: visibility 0s, opacity 0.5s linear;
+      transition:  opacity 0.5s ease-out;
       
     }
   }
@@ -52,9 +53,11 @@ const LinkItem = styled.li`
     &::after{
       visibility: visible;
       opacity: 1;
-      transition: .4s;
+      
     }
   }
+
+
 
 `;
 
