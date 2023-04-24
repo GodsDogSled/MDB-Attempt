@@ -26,11 +26,14 @@
     font-size: 28px;
     font-family: shapiro-95-extd;
     color: white;
-    background-color: transparent;
+    background-color: black;
     border: none;
     border-bottom: 2px solid white;
-
     text-overflow: initial;
+  }
+
+  option:hover {
+    background-color: red;
   }
 
   select:focus {
@@ -40,7 +43,7 @@
 
   option {
     text-transform: uppercase;
-    max-width: 200px;
+    max-width: 100px;
     overflow: hidden;
     word-wrap: normal !important;
     white-space: break-spaces;
@@ -49,20 +52,29 @@
   option:before {
     white-space: break-spaces;
   }
-
-  // .blue-half {
-  //   position: absolute;
-  //   bottom: 0;
-  //   height: 10px;
-  //   background-color: blue;
-  // }
 }
 
 
 .sort-by {
+  display: block;
+  width: 100%;
+
   p {
     margin: 0;
     font-size: 10px;
+
+    &:after {
+      content: "";
+      background: url("data:image/svg+xml,%3Csvg clip-rule='evenodd' fill-rule='evenodd' fill='white' stroke-linejoin='round' stroke-miterlimit='2' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m16.843 10.211c.108-.141.157-.3.157-.456 0-.389-.306-.755-.749-.755h-8.501c-.445 0-.75.367-.75.755 0 .157.05.316.159.457 1.203 1.554 3.252 4.199 4.258 5.498.142.184.36.29.592.29.23 0 .449-.107.591-.291 1.002-1.299 3.044-3.945 4.243-5.498z'/%3E%3C/svg%3E");
+      background-size: 20px;
+      width: 20px;
+      height: 15px;
+      display: inline-block;
+    }
+
+    svg {
+      fill: white;
+    }
   }
 
   position: relative;

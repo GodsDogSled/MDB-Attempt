@@ -30,7 +30,7 @@ const LinksWrapper = styled.ul`
   z-index:999;
   
   position: fixed;
-  top: 100px;
+  top: 110px;
   left: 0;
 
   transition:  1s;
