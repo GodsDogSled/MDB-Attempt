@@ -28,7 +28,7 @@ function MovieCard({movieObject, isFavourite, credits}) {
         </div>
         <div className="movie-card-text">
           <div className="top-cluster">
-            <p className="movie-title movie-text">{movieObject.title}</p>
+            <p className="movie-title movie-text">{movieObject.title.slice(0,28)}{movieObject.title.length > 28 ? "...":""}</p>
             <p className="movie-release-date movie-text">{movieObject.release_date.slice(0, 4)}</p>
           </div>
           <div className="bottom-row-container">
