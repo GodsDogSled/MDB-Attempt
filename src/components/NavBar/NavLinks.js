@@ -1,5 +1,6 @@
 import React from "react";
-import styled from "styled-components" 
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const NavLinksContainer =  styled.div`
   height:100%;
@@ -20,23 +21,22 @@ const LinkItem = styled.li`
   height:100%;
   padding: 0 1.1em;
   font-weight:500;
-  color:white;
   font-size:14px;
-  font-family:shapiro;
+  font-family: grotesque-bold;
   border-top: 2px solid transparent;
 
-  &:hover{
-    border-top:2px solid blue;
+  & a{
+    color:white;
+
   }
+
+  a:hover{
+    border-bottom:solid 5px blue;
+    transition:ease .15s;
+
+  }
+
 `;
-
-const Link = styled.a`
-  text-decoration: none;
-  color:inherit;
-  font-size:inherit;
-`;
-
-
 
 export default function NavLinks(props){
  return <NavLinksContainer>

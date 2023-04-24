@@ -24,7 +24,6 @@ h2 {
   border-bottom: 2px solid white;
   text-transform: uppercase;
   font-size: 28px;
-  // margin: 2rem;
 }
 
 
@@ -32,7 +31,6 @@ h2 {
 p {
   font-family: grotesque-bold;
   color: white;
-  // margin: 2rem;
 }
 
 a {
@@ -54,7 +52,6 @@ select {
     padding: 1rem;
     background-color: $base-color;
     justify-content: center;
-
   }
 }
 
@@ -63,23 +60,23 @@ select {
 @media screen and (min-width:$tabletPortrait) and (max-width:$laptop) {
   .movie-grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(2, 252px);
+    gap: 1rem;
     padding: 2rem;
     background-color: black;
     justify-items: center;
-
+    justify-content: center;
   }
 
 }
 
 
 
-@media screen and (min-width:1081px) {
+@media screen and (min-width:1024px) {
   .movie-grid-container {
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     padding: 2rem;
     background-color: black;
@@ -95,17 +92,13 @@ select {
   padding: 0;
   display: flex;
   flex-direction: column;
-
   justify-content: space-around;
   width: 100%;
   list-style: none;
   background-color: #fff;
   z-index: 999;
-
   position: fixed;
   top: 55px;
   left: 0;
-
   transition: .4s;
-
 }
