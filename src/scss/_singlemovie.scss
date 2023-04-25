@@ -233,6 +233,37 @@ h2.more-info-title {
 
 
   }
+
+  .liked {
+    animation: fadeIn .9s;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: rotate(90deg);
+    }
+
+    100% {
+      opacity: 1;
+      transform: scale(1.6);
+    }
+  }
+
+  .unliked {
+    animation: fadeOut .7s;
+  }
+
+  @keyframes fadeOut {
+    0% {
+      opacity: 0;
+      transform: rotate(90deg);
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
 }
 
 //end tablet mediaquery

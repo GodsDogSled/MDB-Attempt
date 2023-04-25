@@ -63,12 +63,12 @@ const DesktopSearchContainer =  styled.div`
     content:"";
     transition: transform .4s;
     display: inline-block;
-    width:16px !important;
-    height:16px;
+    width:17px !important;
+    height:17px;
     background-color:blue;
     position:absolute;
-    top:37px;
-    right:7px;
+    top:46px;
+    right:19px;
     z-index:-10;
   }
 

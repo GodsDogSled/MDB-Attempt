@@ -16,7 +16,7 @@ function PageLanding() {
     async function getMovieData(type) {
         try {
             let resp = await axios.get(`https://api.themoviedb.org/3/movie/${type}?api_key=${apiKey}&language=en-US&page=1`);
-            await setMovieData(resp.data.results.slice(0, 12));
+            await setMovieData(resp.data.results.slice(0, 15));
             
         } catch (error) {
             console.log(error);
