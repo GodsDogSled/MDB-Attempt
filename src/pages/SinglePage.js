@@ -3,22 +3,19 @@ import { useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import {useDispatch} from "react-redux";
-import { apiKey, apiUrl } from "../Globals/globalVariables";
 import axios from "axios";
 import YouTube from "react-youtube";
-import MovieCard from "../components/MovieCards";
 import isFavourite from "../utilities/isFavourite";
 import {Link} from "react-router-dom";
 import FavouriteButton from "../components/FavouriteButton";
 import {addFavourite, removeFavourite} from "../features/favouritesSlice";
-
 
 function SinglePage(){
   const dispatch = useDispatch();
   const [movie, setMovie] = useState();
   const location = useLocation();
   const favourites = useSelector((state) => state.rootReduce.favouritesReducer.items);
-
+  const [playTrailer, setPlayTrailer] = useState(false);
   const movieId = location.state.from.id
 
   function handleFavClick(addToFav, obj) {
@@ -97,13 +94,26 @@ function SinglePage(){
       );
     }
     
-    return (trailer?.key) ? <YouTube containerClassName = {"youtube-container"}   
-    opts={{width:"100%", height:"100%" }}  videoId = {trailer?.key}/>: <p>No Trailer</p>;
+    return (trailer?.key) ? 
+      <YouTube 
+        videoId = {trailer?.key} 
+        containerClassName = {"youtube-container"}   
+        opts={{
+          width:"100%", 
+          height:"100%" 
+        }}  
+      />
+      : <p>No Trailer</p>;
+  }
+
+  function handleOuterClick(){
+   document.addEventListener('mousedown', ()=>setPlayTrailer(false));
   }
 
  
   return(
     <>
+    
     <h1 className="more-info-heading">MORE INFO</h1>
     <div className="single-card">
     <div className="tablet-card">
@@ -113,12 +123,19 @@ function SinglePage(){
         <img className="display-desktop" src={`https://image.tmdb.org/t/p/w400/${movie?.poster_path}`} alt="" />
       </section>
       <section className="info">
-        
+
         <h2 className="more-info-title">{movie?.title}</h2>
+        
         <div className="first-info">
           <p>{movie?.release_date}</p>
           <p>{findAgeRating()}</p>
           <p>{movie?.runtime} minutes</p>
+        </div>
+          <div className="trailer">
+          {(playTrailer) ? <button onClick={() => setPlayTrailer(false)} className="close-button">Close</button>:""}
+          {(playTrailer) ? handleOuterClick():""}
+          <button onClick={() =>setPlayTrailer(!playTrailer)}>Play Trailer</button>
+          {(playTrailer) ? findTrailer() : ""}
         </div>
         <div className="overview">
           <p>{movie?.overview}</p>
@@ -131,18 +148,14 @@ function SinglePage(){
           <h3>Writer</h3>
           <p>{showWriter()}</p>
         </div>
+      
         <div className="rating-and-fav">
-        <p>{movie?.vote_average.toFixed(1)}/10</p>
-        {(isFavourite(favourites,null,movie?.id)) ?(<FavouriteButton movieObject={movie} remove={true} handleFavClick = {handleFavClick}/>):(<FavouriteButton movieObject={movie} remove={false} handleFavClick = {handleFavClick}/>) }
+          <p>{movie?.vote_average.toFixed(1)} / 10</p>
+          {(isFavourite(favourites,null,movie?.id)) ?(<FavouriteButton movieObject={movie} remove={true} handleFavClick = {handleFavClick}/>):(<FavouriteButton movieObject={movie} remove={false} handleFavClick = {handleFavClick}/>) }
         </div>
       </section>
-     
       </div>
-      
     </div>
-    <div className="trailer">
-        {findTrailer()}
-      </div>
     </>
   )
 

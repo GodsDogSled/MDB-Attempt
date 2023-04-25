@@ -16,13 +16,11 @@
 }
 
 h2.more-info-title {
-
   font-family: shapiro-45-welter-text;
   font-size: 22px;
   color: white;
   margin: 5px;
   margin-bottom: 1px;
-
   border: none;
   text-transform: capitalize;
   font-weight: lighter;
@@ -39,14 +37,12 @@ h2.more-info-title {
 }
 
 .single-card {
-  max-width: 200px;
-
+  max-width: 450px;
   background-color: #1D1D1D;
-  width: 310px;
-  height: 94%;
   margin: 0 auto;
   padding: 25px;
   border-radius: $rounded-border;
+  position: relative;
 
   h1,
   h2,
@@ -54,6 +50,11 @@ h2.more-info-title {
   p,
   img {
     margin: 0;
+  }
+
+  .display-mobile {
+    display: block;
+    padding-bottom: 1.5em;
   }
 
   .info {
@@ -100,13 +101,6 @@ h2.more-info-title {
 
   .age-rating {
     font-family: shapiro-55-middle-extd;
-  }
-
-  .ytp-large-play-button .ytp-button .ytp-large-play-button-red-bg {
-    width: 10px;
-  }
-
-  .age-rating {
     margin-top: 1.5rem;
   }
 
@@ -116,20 +110,10 @@ h2.more-info-title {
   }
 
   .tablet-card {
-    width: 200px;
+    display: grid;
     margin: 0;
     padding: 0;
   }
-
-
-
-  // .youtube-container {
-  //   position: absolute;
-  //   left: 0;
-  //   right: 0;
-  //   top: 0;
-  //   bottom: 0;
-  // }
 
   svg {
     fill: blue;
@@ -144,33 +128,53 @@ h2.more-info-title {
     border: none;
   }
 
+  .trailer {
+
+    button {
+      border: solid 1px white;
+      width: fit-content;
+      color: white;
+      height: fit-content;
+      padding: 10px;
+      margin-top: 10px;
+    }
+
+    iframe {
+      position: absolute;
+      z-index: 9;
+      top: 25px;
+      left: 0;
+      right: 0;
+      height: 300px;
+    }
+
+    .close-button {
+      position: absolute;
+      background-color: #1D1D1D;
+      top: 50px;
+      left: 30px;
+      z-index: 10;
+    }
+  }
+
 }
 
 //end .single-card
 
-.trailer {
-  margin: 0 auto;
-  margin-top: 1rem;
-  background-color: #1D1D1D;
-  border-radius: $rounded-border;
-  padding: 25px;
-  max-width: 500px;
 
-}
 
-@media (min-width:$tabletPortrait) {
+@media (min-width:790px) {
   .single-card {
-
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     margin: 0 auto;
-    min-width: (718px);
+
+    min-width: (748px);
 
     h2 {
       font-family: grotesque-bold;
       margin-bottom: 0;
     }
-
 
     .display-mobile {
       display: none;
@@ -178,24 +182,22 @@ h2.more-info-title {
 
     .display-tablet {
       display: block;
-      width: 280px;
     }
 
     .tablet-card {
       width: auto;
       display: flex;
       flex-direction: row-reverse;
-
       border-radius: $rounded-border;
     }
 
     .info {
       display: flex;
       flex-direction: column;
-
       justify-content: space-between;
       margin-right: 1rem;
-      height: 420px;
+      margin-bottom: 0;
+      height: 450px;
 
       .first-info {
         display: flex;
@@ -203,73 +205,83 @@ h2.more-info-title {
       }
     }
 
+    .rating-and-fav {
+      p {
+        font-size: 1.5em;
+        line-height: 16px;
+      }
+    }
+
     .trailer {
-      height: 15rem;
+      iframe {
+        z-index: 9;
+        // top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+      }
+
+      .close-button {
+        background-color: #1D1D1D;
+        top: auto;
+        bottom: 30px;
+        left: 30px;
+        z-index: 10;
+      }
     }
 
 
-
   }
-
-
-
 }
 
 //end tablet mediaquery
 
-@media(min-width:$desktopMedium) {
+@media(min-width:1638px) {
+
   .single-card {
-    flex-direction: row;
-    min-width: (1230px);
-
-    .display-tablet {
-      display: none;
-    }
-
-    .display-desktop {
-      display: block;
-    }
-
-    .info {
-      height: 600px;
-    }
-
-    .trailer {
-      width: 33%;
-    }
-  }
-}
-
-@media(min-width:$desktop) {
-  .single-card {
-    min-width: (1390px);
-    max-width: (1690px);
-
-    .display-tablet {
-      display: none;
-    }
-
-    .display-desktop {
-      display: block;
-    }
-
-    .tablet-card {
-      width: 66%;
-    }
-
-    .info {
-      height: 600px;
-    }
+    min-width: (1248px);
 
     h2 {
-      font-family: grotesque-bold;
-      margin-bottom: 0;
-
-
+      font-size: 2.5em;
     }
 
+    h3 {
+      font-size: 1.7em;
+    }
 
+    p {
+      font-size: 1.2em;
+    }
 
+    .info {
+      min-height: 600px;
+      width: 100%;
+    }
 
+    .overview p {
+      width: 600px;
+    }
+
+    .rating-and-fav {
+      font-size: larger;
+
+      button {
+        line-height: 2px;
+        transform: scale(1.5);
+      }
+    }
+  }
+
+  .desktop-media {
+    display: flex;
+  }
+
+  .display-desktop {
+    display: block !important;
+  }
+
+  .display-tablet {
+    display: none !important;
   }
 }

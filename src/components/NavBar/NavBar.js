@@ -30,7 +30,7 @@ const LeftSection = styled.div`
   display: flex;
   height:100%;
   position:relative;
-  width:100px;
+  width:85px;
   top:12px;
 `;
 const MiddleSection = styled.div`
