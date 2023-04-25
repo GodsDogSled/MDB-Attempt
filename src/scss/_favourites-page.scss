@@ -8,6 +8,7 @@
     z-index: 500;
     width: 100%;
     background-color: black;
+    padding-top: 26px;
   }
 
   h2 {
@@ -20,7 +21,7 @@
 
   .blue-box {
     position: absolute;
-    top: 1px;
+    top: 27px;
     left: -39px;
     z-index: -19;
     background-color: blue;
@@ -29,7 +30,14 @@
   }
 
   .movie-grid-container {
-    padding-top: 50px;
+    padding-top: 90px;
   }
 
+}
+
+@media screen and (min-width: 700px) {
+  .favourites h2 {
+    font-size: 30px;
+    font-family: shapiro-95-extd;
+  }
 }

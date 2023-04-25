@@ -14,15 +14,16 @@ const NavBarContainer = styled.div`
     background-color:black;
     top:0;
     z-index:999;
-    margin-left: 15px;
-    margin-right: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
     height:70px;
     display:flex;
     align-items:center;
     justify-content:space-between;
     margin-bottom:0;
     margin-top:0;
-    padding-top:20px;
+    padding-top:30px;
+    padding-bottom:26px;
 `;
 
 const LeftSection = styled.div`
