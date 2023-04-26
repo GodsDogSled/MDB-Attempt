@@ -31,6 +31,7 @@ const LinkItem = styled.li`
     display:inline-block;
     position:relative;
     transition: 0.5s ease-out;
+    text-decoration:none;
     
     &::after{
       position:absolute;
