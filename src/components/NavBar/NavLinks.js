@@ -15,14 +15,14 @@ const LinksWrapper = styled.ul`
   list-style:none;
   align-items:center;
   justify-content:center;
+  gap:30px;
 `;
 
 const LinkItem = styled.li`
   height:fit-content;
   width:100%;
   padding: 0 1.1em;
-  font-weight:500;
-  font-size:14px;
+  font-size:15px;
   font-family: grotesque-bold;
   border-top: 2px solid transparent;
   
@@ -43,22 +43,17 @@ const LinkItem = styled.li`
       visibility: hidden;
       opacity: 0;
       transition:  opacity 0.5s ease-out;
-      
     }
   }
 
-
+ 
 
   a:hover{
     &::after{
       visibility: visible;
       opacity: 1;
-      
     }
   }
-
-
-
 `;
 
 export default function NavLinks(props){

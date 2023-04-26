@@ -11,6 +11,10 @@ footer {
     margin-top: 500px;
     border-top: solid 2px white;
     padding-top: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
 
-    a {}
+    a:visited {
+        color: white;
+    }
 }

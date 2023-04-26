@@ -18,6 +18,7 @@ const NavBarContainer = styled.div`
     padding-right: 15px;
     height:70px;
     display:flex;
+    flex: 2 1 auto;
     align-items:center;
     justify-content:space-between;
     margin-bottom:0;
@@ -37,6 +38,8 @@ const MiddleSection = styled.div`
   display: flex;
   height:100%;
   align-items:center;
+  margin-right:auto;
+  margin-left:8em;
 `;
 const RightSection = styled.div`
   display:flex;
@@ -45,7 +48,6 @@ const RightSection = styled.div`
 `;
 
 const DesktopSearchContainer =  styled.div`
-  
   border-radius:10px 10px 10px 10px;
   padding:.5rem;
   height:25px;
