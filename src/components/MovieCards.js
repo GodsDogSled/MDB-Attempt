@@ -17,18 +17,18 @@ function MovieCard({movieObject, isFavourite, credits}) {
 
   return (
     <div>
-      <div id={movieObject.id} className="movie-card">
+      <div id={movieObject.id} className="movie-card"> 
         <div className="movie-poster">
-          <img className="movie-poster-img" src={`https://image.tmdb.org/t/p/w200/${movieObject.poster_path}`} alt="Movie Poster"/>
-          <button className="more-info" type="button">
-            <Link to="/single" state={{from: movieObject}}>
-              More Info
-            </Link>                                     
-          </button>
-        </div>
+          <div className='more-info' to="/single" state={{from: movieObject}}>
+            <img className="movie-poster-img" src={`https://image.tmdb.org/t/p/w200/${movieObject.poster_path}`} alt="Movie Poster"/>
+          </div>   
+          <Link to="/single" state={{from: movieObject}} className='hover-show'><p>More Info</p></Link>
+        </div>                                 
+          
+        
         <div className="movie-card-text">
           <div className="top-cluster">
-            <p className="movie-title movie-text">{movieObject.title.slice(0,28)}{movieObject.title.length > 28 ? "...":""}</p>
+            <p className="movie-title movie-text">{movieObject.title}</p>
             <p className="movie-release-date movie-text">{movieObject.release_date.slice(0, 4)}</p>
           </div>
           <div className="bottom-row-container">

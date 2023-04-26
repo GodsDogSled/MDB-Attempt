@@ -28,7 +28,9 @@
     margin: 5px;
     margin-bottom: 1px;
     max-width: 200px;
-
+    word-wrap: break-word;
+    max-height: 45px;
+    overflow: hidden;
   }
 
   .movie-release-date {
@@ -59,9 +61,43 @@
     height: 300px;
     position: relative;
 
-    :hover+.more-info {
-      display: block;
+    .hover-show {
+      visibility: hidden;
+      position: absolute;
+      text-align: center;
+      margin: 0;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      vertical-align: center;
+      margin: .4em;
+      transition: .5s;
+      opacity: 0;
+
+      background-color: #00000090;
+
+      p {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        margin: 0;
+        font-family: shapiro-95-extd;
+      }
+
     }
+
+    &:hover {
+      .hover-show {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  .movie-poster-img:hover+.more-info {
+    display: block;
   }
 
   .more-info {
@@ -75,17 +111,17 @@
       }
     }
 
-    position: absolute;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: shapiro-95-extd;
-    background-color: #00000090;
-    width: 90%;
-    height: 94%;
+    // position: absolute;
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    // font-family: shapiro-95-extd;
+    // background-color: #00000090;
+    // width: 90%;
+    // height: 94%;
 
-    display: none;
+
   }
 
   svg {
