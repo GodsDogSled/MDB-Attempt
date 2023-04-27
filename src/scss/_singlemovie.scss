@@ -157,19 +157,15 @@ h2.more-info-title {
       z-index: 10;
     }
   }
-
 }
 
 //end .single-card
-
-
 
 @media (min-width:790px) {
   .single-card {
     display: flex !important;
     flex-direction: column;
     margin: 0 auto;
-
     min-width: (748px);
 
     h2 {
@@ -216,7 +212,6 @@ h2.more-info-title {
     .trailer {
       iframe {
         z-index: 9;
-        // top: 0;
         left: 0;
         right: 0;
         bottom: 0;
@@ -231,8 +226,6 @@ h2.more-info-title {
         z-index: 10;
       }
     }
-
-
   }
 
   .liked {
@@ -274,8 +267,6 @@ h2.more-info-title {
   .single-card {
     min-width: (1248px);
 
-
-
     h2 {
       font-size: 2.5em;
       line-height: 1.2;
@@ -296,7 +287,7 @@ h2.more-info-title {
     }
 
     .overview p {
-      width: 600px;
+      width: 700px;
     }
 
     .rating-and-fav {

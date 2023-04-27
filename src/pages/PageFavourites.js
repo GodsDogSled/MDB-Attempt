@@ -16,8 +16,8 @@ function PageFavourites() {
           <h2>Favourites</h2>
         </div>
         {favourites.length < 1 ? (
-          <p>No favourites in your collection. Return to the <Link to="/">home</Link> page
-          to add some favourite characters.</p>
+          <p className='no-favourites'>No favourites in your collection. Return to the <Link to="/">home</Link> page
+          and click the blue star to add some movies to your favourites collection.</p>
         ):(
           <div className="movie-grid-container">
             {favourites.map((movieObj, i) => {
