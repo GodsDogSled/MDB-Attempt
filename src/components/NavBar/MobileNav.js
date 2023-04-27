@@ -5,7 +5,6 @@ import MenuToggle from "./menuToggle";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import SearchWidget from "./SearchWidget";
-// import SearchBar from "./SerachBar";
 
 const NavLinksContainer =  styled.div`
   height:100%;
@@ -17,26 +16,6 @@ const NavLinksContainer =  styled.div`
   transition: width 2s, height 4s; 
 `;
 
-const LinksWrapper = styled.ul`
-  margin:0;
-  padding:0;
-  display:flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height:10%;
-  width:100%;
-  list-style:none;
-  background-color: #fff;
-  z-index:999;
-  
-  position: fixed;
-  top: 110px;
-  left: 0;
-
-  transition:  1s;
-  
- 
-`;
 
 const LinkItem = styled.li`
   padding: 0 1.1em;
@@ -63,6 +42,7 @@ const SearchContainer =  styled.div`
 export default function MobileNav(props){
   const [isOpen, setOpen] = useState(false);
   const [isScrolling, setIsScrolling] = useState(false);
+  
   useEffect(()=>{
     let myTO=null;
     const toggle = () => {
@@ -76,6 +56,7 @@ export default function MobileNav(props){
     }
     window.addEventListener("scroll", toggle);
   });
+
  return<>
  <NavLinksContainer >
     <MenuToggle isOpen = {isOpen} toggle={()=> setOpen(!isOpen)}/>

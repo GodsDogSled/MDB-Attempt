@@ -14,7 +14,7 @@ import  NavBar  from '../components/NavBar/NavBar';
 function AppRouter() {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={'/&Chill'}>
       <div className="wrapper">
         <NavBar  />
         <main>

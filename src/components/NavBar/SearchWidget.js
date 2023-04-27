@@ -4,10 +4,6 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 function SearchWidget(){
-  
-    const [isScrolling, setScrolling ] = useState(false); 
-
-    
         return(
             <>
                 <Link to="/search">
@@ -15,8 +11,6 @@ function SearchWidget(){
                 </Link>
             </>
         )
-    
-   
 }
 
 export default SearchWidget;
