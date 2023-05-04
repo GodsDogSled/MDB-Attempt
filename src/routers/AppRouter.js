@@ -14,11 +14,11 @@ import  NavBar  from '../components/NavBar/NavBar';
 function AppRouter() {
 
   return (
-    <BrowserRouter basename={'/&Chill'}>
+    <BrowserRouter basename='/AndChill'>
       <div className="wrapper">
         <NavBar  />
         <main>
-          <Routes>
+          <Routes >
             <Route path="/" exact element={<PageLanding />} />
             <Route path="/favourites" element={<PageFavourites />} />
             <Route path="/about" element={<PageAbout />} />
